@@ -8,7 +8,7 @@ const apiFetch = async (searchTerm) => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '19f738bdd6msh3dffd3700197861p15d901jsnb906d8302a9a',
+      'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
       'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
     }
   };

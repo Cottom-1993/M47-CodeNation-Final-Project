@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div className="search">
     <input
-        placeholde="search for a film"
+        placeholder="search for a film"
         onChange={(event) => setSearchTerm(event.target.value)}
     />
     <button onClick={() => apiFetch(searchTerm)}>

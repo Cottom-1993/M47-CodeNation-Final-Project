@@ -66,7 +66,7 @@ const App = () => {
     <Link to="/">Homepage</Link>
 
     <Routes>
-      <Route path="/" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>} />
+      <Route path="/" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
     </Routes>
 
     </BrowserRouter>  

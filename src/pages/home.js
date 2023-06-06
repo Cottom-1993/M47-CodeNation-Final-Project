@@ -1,19 +1,20 @@
+import React from "react";
 
-const HomePage = () => {
+const HomePage = (props) => {
     return (
         <div className="search">
         <input
             placeholder="search for a film"
-            onChange={(event) => setSearchTerm(event.target.value)}
+            onChange={(event) => props.setSearchTerm(event.target.value)}
         />
-        <button onClick={() => apiFetch(searchTerm)}>
+        <button onClick={() => props.apiFetch(props.searchTerm)}>
             Click to search for a film
         </button>
         <div>
-          {movieData?.length > 0
+          {props.movieData?.length > 0
               ?(
   
-                 movieData.map((movie)=>(
+                 props.movieData.map((movie)=>(
                    <h1>{movie.originalTitleText.text}</h1>
                  ))
                   

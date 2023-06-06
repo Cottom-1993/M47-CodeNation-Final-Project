@@ -1,5 +1,12 @@
 import React from "react";
 
+//Home function which defines the layout of our applications Homepage
+
+//Input bar to search for a title and button to access the APIFetch function
+//and get the required data
+
+
+//CAROUSEL FUNCTIONALITY TO BE ADDED IN PLACE OF LINES 25-30. LISTING IMAGES RATHER THAN TEXT
 const HomePage = (props) => {
     return (
         <div className="search">

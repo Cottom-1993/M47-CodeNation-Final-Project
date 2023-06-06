@@ -1,4 +1,6 @@
 import React from 'react';
+//PAGE TO CREATE FUNCTIONALITY OF THE CAROUSEL
+
 
 //Access API Data: Upcming Titles
 const upcomingMovies = async () =>{
@@ -26,14 +28,14 @@ const apiData = await upcomingMovies.json();
 
 
 //code for creating carousel
-const Carousel = apiData.map({}) => {
+// const Carousel = apiData.map({}) => {
 
-}
-return {
+// }
+// return {
 
-}
+// }
 
-//Code for scrolling right on the carousel
+//Code for scrolling right on the carousel- TO BE UPDATED FOR THIS APP
   const carouselScrollRight = () => {
     if (currentIndex === catPics.length-1){
       setCurrentIndex(0)
@@ -42,7 +44,7 @@ return {
     }
   }
 
-  //Code for scrolling left on the carousel
+  //Code for scrolling left on the carousel- TO BE UPDATED FOR THIS APP
   const carouselScrollLeft = () => {
     if (currentIndex === 0){
       setCurrentIndex(catPics.length-1)

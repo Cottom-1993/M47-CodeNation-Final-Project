@@ -1,3 +1,6 @@
+// Import React, useState & useEffect for rendering API data
+//Import React Router Dom for 
+
 import React from "react";
 import {useState, useEffect} from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
@@ -12,6 +15,7 @@ import HomePage from "./pages/home";
 
 const App = () => { 
   
+  //API function to get movie data for our search bar
   const apiFetch = async (searchTerm) => {
     const url = `https://moviesdatabase.p.rapidapi.com/titles/search/akas/${searchTerm}`;
     const options = {
@@ -36,6 +40,8 @@ const App = () => {
     upcomingMovies()
   },[])
   
+
+  //API function to access upcoming movie data for our carousel
   const upcomingMovies = async () =>{
     const url = 'https://moviesdatabase.p.rapidapi.com/titles/x/upcoming';
     const options = {
@@ -59,7 +65,7 @@ const App = () => {
     }
     
 
-
+//React Router DOM layout for our routes.
   return (
     <BrowserRouter>
 

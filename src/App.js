@@ -63,8 +63,10 @@ const App = () => {
   return (
     <BrowserRouter>
 
+    {/* Linking specific routes to specific paths */}
     <Link to="/">Homepage</Link>
 
+    {/* Specifying the paths and associating them with various files to display different pages */}
     <Routes>
       <Route path="/" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
     </Routes>

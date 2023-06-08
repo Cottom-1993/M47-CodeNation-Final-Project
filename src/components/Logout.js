@@ -1,5 +1,4 @@
 import React from "react"
-import {useState} from "react"
 
 const Logout = () => {
 
@@ -14,6 +13,6 @@ const Logout = () => {
             </form>
         </div>
     )
-}
+} // deletes the token by setting changing the expiry date of it to the date given when the button is pressed
 
 export default Logout

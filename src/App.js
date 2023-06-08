@@ -1,4 +1,4 @@
-// Import React, useState & useEffect for rendering API data
+//Import React, useState & useEffect for rendering API data
 //Import React Router Dom for 
 
 import React from "react";

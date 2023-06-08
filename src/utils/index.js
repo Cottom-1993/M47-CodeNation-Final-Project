@@ -21,7 +21,7 @@ const apiFetch = async (searchTerm) => {
 
   export const registerUser = async (username, password, email, newUser) => {
     try {
-      const response = await fetch("http://localhost:5001/users/register", {
+      const response = await fetch(`${process.env.REACT_APP_REST_API_URL}register`, {
         method: "POST",
         headers: {
           "Content-Type" : "application/json"
@@ -42,7 +42,7 @@ const apiFetch = async (searchTerm) => {
 
   export const loginUser = async (username, password, newUser) => {
     try {
-      const response = await fetch("http://localhost:5001/users/login", {
+      const response = await fetch(`${process.env.REACT_APP_REST_API_URL}login`, {
         method: "POST",
         headers: {
           "Content-Type" : "application/json"
@@ -63,7 +63,7 @@ const apiFetch = async (searchTerm) => {
 
   export const readUsers = async () => {
     try {
-      const response = await fetch("http://localhost:5001/users/readUsers", {
+      const response = await fetch(`${process.env.REACT_APP_REST_API_URL}readUsers`, {
         method: "GET",
         headers: {
           "Content-Type" : "application/json"
@@ -80,7 +80,7 @@ const apiFetch = async (searchTerm) => {
   export const authCheck = async (token) => {
     try {
       console.log(token)
-      const response = await fetch ("http://localhost:5001/users/authCheck", {
+      const response = await fetch (`${process.env.REACT_APP_REST_API_URL}authCheck`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const apiFetch = async (searchTerm) => {
 
   export const updateUser = async (username, newPassword) => {
     try {
-      const response = await fetch ("http://localhost:5001/users/updateUser", {
+      const response = await fetch `${process.env.REACT_APP_REST_API_URL}updateUser`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -115,7 +115,7 @@ const apiFetch = async (searchTerm) => {
 
   export const deleteUser = async (username) => {
     try {
-      const response = await fetch ("http://localhost:5001/users/deleteUser", {
+      const response = await fetch (`${process.env.REACT_APP_REST_API_URL}deleteUser`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"

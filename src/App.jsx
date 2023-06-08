@@ -22,9 +22,39 @@ const apiFetch = async (searchTerm) => {
   }
 }
 
+//Light Toggle Function
+
+
+
+function changeShade() {
+  let grey = document.getElementById('rangeGrey').value;
+ 
+  let color = 'rgb('+ grey + ',' + grey + ',' + grey + ')';
+  document.body.style.backgroundColor = color;
+ 
+  if (grey > 128)
+  {
+    //document.body.style.color = 'rgba(0,0,0,1.0)';
+    document.getElementById("colortext").style.color = 'rgba(0,0,0)';
+    
+  }
+  else
+  {
+    //document.body.style.color = 'rgba(255,255,255,1.0';
+    document.getElementById("colortext").style.color = 'rgba(255,255,255)';
+  }
+  
+ }
+
+
+
+
+
 const App = () => { 
 
   const [searchTerm, setSearchTerm] = useState("")
+
+ 
 
   return (
     <div className="search">
@@ -35,7 +65,16 @@ const App = () => {
     <button onClick={() => apiFetch(searchTerm)}>
         Click to search for a film
     </button>
+   
+    
+
+{/*Light Slider*/}
+<h2 id = "colortext">Select Shade<span id ="colorOutput"></span></h2>
+<libel>grey: </libel>
+<input type="range" id="rangeGrey" class ="slider" defaultValue="128" min="0" max="255" onChange={() => changeShade() }/>
+
   </div>
+  
   );
 };
 

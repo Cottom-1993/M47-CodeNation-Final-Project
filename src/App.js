@@ -109,6 +109,7 @@ const App = () => {
       <Route path="/account" element={<Account></Account>}></Route>
     </Routes>
 
+
     {/*Light Slider*/}
     <h2 id = "colortext">Select Shade<span id ="colorOutput"></span></h2>
     <libel>grey: </libel>

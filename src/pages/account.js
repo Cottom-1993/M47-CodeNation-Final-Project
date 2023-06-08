@@ -10,7 +10,7 @@ import {authCheck} from "../utils/index.js"
 import {getCookie} from "../common/index.js"
 
 const Account = () => {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState();
 
     useEffect(() => {
         let cookie = getCookie("jwt_token");

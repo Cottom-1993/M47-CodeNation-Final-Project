@@ -10,6 +10,26 @@ import {authCheck} from "./utils/index.js"
 import {getCookie} from "./common/index.js"
 // const [filmPic, setFilmPic] = useState([])
 
+function changeShade() {
+  let grey = document.getElementById('rangeGrey').value;
+ 
+  let color = 'rgb('+ grey + ',' + grey + ',' + grey + ')';
+  document.body.style.backgroundColor = color;
+ 
+  if (grey > 128)
+  {
+    //document.body.style.color = 'rgba(0,0,0,1.0)';
+    document.getElementById("colortext").style.color = 'rgba(0,0,0)';
+    
+  }
+  else
+  {
+    //document.body.style.color = 'rgba(255,255,255,1.0';
+    document.getElementById("colortext").style.color = 'rgba(255,255,255)';
+  }
+  
+ }
+
 //Access API data for search term input box
 
 const App = () => { 
@@ -88,6 +108,11 @@ const App = () => {
       <Route path="/home" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
       <Route path="/account" element={<Account></Account>}></Route>
     </Routes>
+
+    {/*Light Slider*/}
+    <h2 id = "colortext">Select Shade<span id ="colorOutput"></span></h2>
+    <libel>grey: </libel>
+    <input type="range" id="rangeGrey" class ="slider" defaultValue="128" min="0" max="255" onChange={() => changeShade() }/>
 
     </BrowserRouter>  
   );

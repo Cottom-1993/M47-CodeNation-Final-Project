@@ -5,15 +5,28 @@ import React from "react";
 import {useState, useEffect} from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import HomePage from "./pages/home";
+import Account from "./pages/account"
+import {authCheck} from "./utils/index.js"
+import {getCookie} from "./common/index.js"
 // const [filmPic, setFilmPic] = useState([])
 
 //Access API data for search term input box
 
-
-
-
-
 const App = () => { 
+  const [user, setUser] = useState()
+
+  useEffect (() => { // if cookie is found, login user automatically
+    let cookie = getCookie("jwt_token")
+
+    if(cookie !== false) {
+      loginWithToken(cookie)
+    }
+  }, [])
+
+  const loginWithToken = async (cookie) => {
+    let user = await authCheck(cookie)
+    setUser(user)
+  }
   
   //API function to get movie data for our search bar
   const apiFetch = async (searchTerm) => {
@@ -60,30 +73,24 @@ const App = () => {
     } catch (error) {
       console.error(error);
     }
-  
-  
-    }
+  }
     
-
 //React Router DOM layout for our routes.
   return (
     <BrowserRouter>
 
     {/* Linking specific routes to specific paths */}
-    <Link to="/">Homepage</Link>
+    <Link to="/home">Homepage</Link>
+    <Link to="/account">Account</Link>
 
     {/* Specifying the paths and associating them with various files to display different pages */}
     <Routes>
-      <Route path="/" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+      <Route path="/home" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+      <Route path="/account" element={<Account></Account>}></Route>
     </Routes>
 
     </BrowserRouter>  
-
-
-  
   );
 };
-
-
 
 export default App;

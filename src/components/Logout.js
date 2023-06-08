@@ -1,17 +1,18 @@
 import React from "react"
 import {useState} from "react"
-import {logoutUser} from "../utils/index.js"
 
 const Logout = () => {
-    const [username, setUsername] = useState()
-    const [password, setPassword] = useState()
 
-    const submitHandler = async (event) => {
-        event.preventDefault()
-        logoutUser(username, password)
+    const submitHandler = async () => {
+        let name = "jwt_token"
+        document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
     }
     return (
-        <div></div>
+        <div>
+            <form onSubmit={submitHandler}>
+                <button type="submit">Logout</button>
+            </form>
+        </div>
     )
 }
 

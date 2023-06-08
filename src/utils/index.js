@@ -130,11 +130,3 @@ const apiFetch = async (searchTerm) => {
       console.log(error)
     }
   }
-
-  export const logoutUser = async (username, password) => {
-    try {
-      
-    } catch (error) {
-      console.log(error)
-    }
-  }

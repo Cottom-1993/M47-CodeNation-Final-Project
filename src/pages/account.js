@@ -46,6 +46,7 @@ const Account = () => {
                     <ReadUsers></ReadUsers>
                     <UpdateUser></UpdateUser>
                     <DeleteUser></DeleteUser>
+                    <Logout></Logout>
                 </>
                 :
                 <h2>Please log in above</h2>

@@ -8,6 +8,7 @@ import DeleteUser from "../components/DeleteUser"
 import Logout from "../components/Logout"
 import {authCheck} from "../utils/index.js"
 import {getCookie} from "../common/index.js"
+import "../Master.css"
 
 const Account = () => {
     const [user, setUser] = useState();

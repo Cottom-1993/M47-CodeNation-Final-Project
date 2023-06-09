@@ -1,3 +1,4 @@
+import "../Master.css"
 //Home function which defines the layout of our applications Homepage
 
 //Input bar to search for a title and button to access the APIFetch function

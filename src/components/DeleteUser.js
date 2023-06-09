@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { deleteUser } from "../utils/index";
+import "../Master.css"
 
 const DeleteUser = () => {
   const [username, setUsername] = useState("");

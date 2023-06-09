@@ -96,7 +96,7 @@ const apiFetch = async (searchTerm) => {
 
   export const updateUser = async (username, newPassword) => {
     try {
-      const response = await fetch `${process.env.REACT_APP_REST_API_URL}updateUser`, {
+      const response = await fetch (`${process.env.REACT_APP_REST_API_URL}updateUser`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"

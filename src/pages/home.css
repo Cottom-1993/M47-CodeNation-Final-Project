@@ -1,12 +1,12 @@
 .carousel-container {
     display: flex;
-    background-color: #c7a42b;
-    height: 500px;
-    width: 250px;
+    background-color: #000000;
+    height: 350px;
+    width: 1900px;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
-    border-radius: 8%;
+    margin: 0px;
+    padding: 15px;
+    border-radius: 1%;
     }
 
     .movieItem{
@@ -22,7 +22,7 @@
 
 img {
     width: 200px;
-    height: 140px;
+    height: 250px;
 }
 
 #buttonarrow {
@@ -41,3 +41,4 @@ img {
     border-color: #c7a42b;
     background-color: black;
 }
+

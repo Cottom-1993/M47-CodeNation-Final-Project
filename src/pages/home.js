@@ -1,14 +1,15 @@
-import "../Master.css"
+
 //Home function which defines the layout of our applications Homepage
 
 //Input bar to search for a title and button to access the APIFetch function
 //and get the required data
 
 //Carousel to scroll through latest upcoming but unreleased films
-
+import "../Master.css"
 import React from "react";
 import './home.css';
 import { useState } from "react";
+
 
 
 const HomePage = (props) => {
@@ -36,14 +37,16 @@ const HomePage = (props) => {
   //Carousel functionality, connecting to the Upcoming Movies function in Home to get API data. Accessing scroll functions displayed above via the buttons.
 
     <div className="search">
-      <input
+      <div id="SearchBar">
+        <input
         placeholder="search for a film"
+        
         onChange={(event) => props.setSearchTerm(event.target.value)}
-      />
-      <button onClick={() => props.apiFetch(props.searchTerm)}>
-        Click to search for a film
-      </button>
-
+        />
+        <button onClick={() => props.apiFetch(props.searchTerm)}>
+         Click to search for a film
+          </button>
+        </div>
       
       <div className="carousel-container">
         {props.movieData?.length > 0
@@ -66,11 +69,14 @@ const HomePage = (props) => {
           ) : (
             <h2>No Movies found</h2>
           )
+          
 
         }
       </div>
     </div>
   )
 }
+
+
 
 export default HomePage;

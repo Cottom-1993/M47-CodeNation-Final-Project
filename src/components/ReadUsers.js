@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { readUsers } from "../utils/index.js";
+import "../Master.css"
 
 const ReadUsers = () => {
   const [usernames, setUsernames] = useState();

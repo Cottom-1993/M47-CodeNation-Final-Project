@@ -1,6 +1,7 @@
 import React from "react"
 import {useState} from "react"
 import {registerUser} from "../utils/index.js"
+import "../Master.css"
 
 const Register = () => {
     const [username, setUsername] = useState()

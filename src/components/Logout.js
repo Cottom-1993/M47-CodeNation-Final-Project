@@ -1,4 +1,5 @@
 import React from "react"
+import "../Master.css"
 
 const Logout = () => {
 

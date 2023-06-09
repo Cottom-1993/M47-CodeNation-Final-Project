@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { updateUser } from "../utils/index";
+import "../Master.css"
 
 const UpdateUser = () => {
     const [username, setUsername] = useState()

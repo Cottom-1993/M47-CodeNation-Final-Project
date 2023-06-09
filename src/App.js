@@ -121,7 +121,7 @@ const App = () => {
     <input type="range" id="rangeGrey" class ="slider" defaultValue="128" min="0" max="255" onChange={() => changeShade() }/>
 
  {/*Text Resizer*/}
-    <h2 id = "sizetext">Select Shade<span id ="sizeOutput"></span></h2>
+    <h2 id = "sizetext">Select Size<span id ="sizeOutput"></span></h2>
     <libel>size: </libel>
     <input type="range" id="rangeSize" class ="slider" defaultValue="20" min="10" max="50" step="5" onChange={() => changeSize() }/>
 

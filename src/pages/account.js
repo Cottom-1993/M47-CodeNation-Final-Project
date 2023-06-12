@@ -37,7 +37,7 @@ const Account = () => {
 
     return (
         <div>
-            <h1>Welcome to the Account page!</h1>
+            <h1 className="accountpage">Welcome to the Account page!</h1>
             <Register></Register>
             <Login newUser={setUser}></Login>
 

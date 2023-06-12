@@ -1,3 +1,37 @@
+.Register {
+    position: relative;
+    text-align: 0%;
+    position: absolute;
+    top: 49%;
+    right: 60%;
+    left: 35%;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+.Login {
+    position: relative;
+    text-align: 0%;
+    position: absolute;
+    top: 36%;
+    right: 50%;
+    left: 35%;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.accountpage {
+    position: relative;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    left: 10%;
+    font-size: 200%;
+
+}
+
 
 .delete{
     text-align: center;

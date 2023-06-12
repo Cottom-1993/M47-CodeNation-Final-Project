@@ -1,26 +1,35 @@
 .Register {
-    position: relative;
     text-align: 0%;
     position: absolute;
-    top: 49%;
-    right: 60%;
-    left: 35%;
+    top: 35%;
+    /* right: 50%; */
+    left: 25%;
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(194, 168, 62)
    
 }
 
 .Login {
-    position: relative;
     text-align: 0%;
     position: absolute;
     top: 36%;
-    right: 50%;
-    left: 35%;
+    right: 35%;
+    /* left: 25%; */
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(194, 168, 62)
 }
 
+.Logout{
+    position: absolute;
+    top: 10%;
+    /* right: 32%; */
+    left: 85%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(194, 168, 62)
+    
+}
 .accountpage {
     position: relative;
     text-align: center;
@@ -29,12 +38,38 @@
     right: 20%;
     left: 10%;
     font-size: 200%;
+    color: rgb(194, 168, 62)
 
 }
 
+.navigationLinksHome{
+    color: rgb(194, 168, 62)
+}
+
+.navigationLinksAccount{
+    color: rgb(194, 168, 62)
+}
+#UserList{
+    color: rgb(194, 168, 62)
+}
+
+.Update{
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(194, 168, 62)
+}
 
 .delete{
-    text-align: center;
+    text-align: 0%;
+    position: absolute;
+    /* top: 36%; */
+    right: 150px;
+    /* left: 35%; */
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(194, 168, 62)
 }
 
 .Logo{
@@ -43,14 +78,21 @@
     align-items: center;
     height: auto;
     margin: 0px;
-    border: 5px solid #040404;
+    border: 5px solid #C2A83E;
     background-color: aliceblue;
     border-radius: 30%;
     cursor: grab;
     object-fit: cover;
     width: 250px;
-    height: 210px;
+    height: 150px;
+    opacity: 0.5;
 }
+
+.Welcome{
+    color: rgb(194, 168, 62);
+    text-align: center;
+}
+
 
 #SliderBar{
    display: flex;
@@ -99,4 +141,7 @@ font-size: 30px;
     border-radius: 10px;
     
 }
+
+
+
 

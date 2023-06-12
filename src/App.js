@@ -8,8 +8,13 @@ import HomePage from "./pages/home";
 import Account from "./pages/account"
 import {authCheck} from "./utils/index.js"
 import {getCookie} from "./common/index.js"
-// const [filmPic, setFilmPic] = useState([])
+import logo from "./image/Shodeon Logo Remastered (2).png"
+import FacebookLogo from "./image/Facebook Logo.png"
+import InstagramLogo from "./image/Instagram Logo.png"
+import TwitterLogo from "./image/Twitter logo.png"
+import "./Master.css"
 
+// const [filmPic, setFilmPic] = useState([])
 function changeShade() {
   let grey = document.getElementById('rangeGrey').value;
  
@@ -99,9 +104,25 @@ const App = () => {
   return (
     <BrowserRouter>
 
+      <img className="Logo" src={logo} alt="Company Logo"></img>
+
     {/* Linking specific routes to specific paths */}
+    <div className="navigationLinksHome">
     <Link to="/home">Homepage</Link>
+    </div>
+    <div className="navigationLinksAccount">
     <Link to="/account">Account</Link>
+    </div>
+    
+   
+    
+    {/*Light Slider*/}
+    
+    <div id="SliderBar">
+    <h2 id = "colortext">Slide to choose dark/light Mode---<span id ="colorOutput"></span></h2>
+    {/* <libel>grey: </libel> */}
+    <input type="range" id="rangeGrey" class ="slider" defaultValue="128" min="0" max="255" onChange={() => changeShade() }/>
+    </div>
 
     {/* Specifying the paths and associating them with various files to display different pages */}
     <Routes>
@@ -110,12 +131,22 @@ const App = () => {
     </Routes>
 
 
-    {/*Light Slider*/}
-    <h2 id = "colortext">Select Shade<span id ="colorOutput"></span></h2>
-    <libel>grey: </libel>
-    <input type="range" id="rangeGrey" class ="slider" defaultValue="128" min="0" max="255" onChange={() => changeShade() }/>
+    <div className="SocialMediaLinks">
+      <a href="https://www.facebook.com/login/" target="_blank" >
+        <img src={FacebookLogo} alt="Facebook Logo"></img>
+      </a>
+      <a href="https://www.instagram.com/accounts/login/" target="_blank" >
+        <img src={InstagramLogo} alt="Instagram logo"></img>
+      </a>
+      <a href="https://twitter.com/i/flow/login" target="_blank" >
+        <img src={TwitterLogo} alt="Instagram logo"></img>
+      </a>
+  
+    </div>
 
     </BrowserRouter>  
+
+    
   );
 };
 

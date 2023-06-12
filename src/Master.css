@@ -32,3 +32,71 @@
 
 }
 
+
+.delete{
+    text-align: center;
+}
+
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0px;
+    border: 5px solid #040404;
+    background-color: aliceblue;
+    border-radius: 30%;
+    cursor: grab;
+    object-fit: cover;
+    width: 250px;
+    height: 210px;
+}
+
+#SliderBar{
+   display: flex;
+   justify-content:right;
+   cursor: grab;
+   
+}
+
+#colortext{
+    width: 400px;
+    height: auto;
+}
+
+#navigationLinksHome{
+padding: 5px;
+}
+
+#navigationLinksAccount{
+padding: 50px;
+}
+
+a{
+color: black;
+font-size: 30px;
+
+}
+
+#SearchBar{
+    /* display: flex; */
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.SocialMediaLinks{
+    display: flex;
+    justify-content: space-around; 
+}
+
+.SocialMediaLinks img{
+    height: auto;
+    width: 65px;
+    position: absolute;
+    bottom: 65px;
+    border-radius: 10px;
+    
+}
+

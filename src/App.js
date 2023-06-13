@@ -135,7 +135,7 @@ const App = () => {
     {/* Specifying the paths and associating them with various files to display different pages */}
     <Routes>
 
-      <Route path="/home" element={<HomePage movieData={movieData} movieSearchResult={movieSearchResult} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+      <Route path="/" element={<HomePage movieData={movieData} movieSearchResult={movieSearchResult} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
 
       <Route path="/account" element={<Account></Account>}></Route>
     </Routes>

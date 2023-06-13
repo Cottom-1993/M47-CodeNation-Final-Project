@@ -1,18 +1,19 @@
 .carousel-container {
     display: flex;
     background-color: #000000;
-    height: 350px;
-    width: 1900px;
+    height: 335px;
+    width: 1950px;
     overflow: hidden;
     margin: 0px;
     padding: 15px;
-    border-radius: 1%;
+    border-radius: 5%;
+    text-align: center;
     }
 
     .movieItem{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     transition: all 0.3s;
     border-radius: 8%;
     text-align: center;
@@ -21,14 +22,14 @@
 
 
 img {
-    width: 200px;
+    width: 180px;
     height: 250px;
 }
 
 #buttonarrow {
     position: absolute;
-    bottom: 27%;
-    left: 40%;
+    bottom: 25%;
+    left: 45%;
     display: flex;
     object-fit: cover;
     }

@@ -112,7 +112,7 @@ const App = () => {
       <img className="Logo" src={logo} alt="Company Logo"></img>
       
 
-      <h1 className="Welcome">Welcome to Shodeon!</h1>
+      
 
     {/* Linking specific routes to specific paths */}
     <div className="navigationLinksHome">

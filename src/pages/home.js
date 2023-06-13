@@ -8,13 +8,17 @@
 import "../Master.css"
 import React from "react";
 import './home.css';
+import MovieCard from '../components/MovieCard'
 import { useState } from "react";
 import Login from "../components/Login"
 import Register from "../components/Register"
 import Account from "./account"
 
 const HomePage = (props) => {
+  // console.log("In Homepage component")
+  // console.log(props.movieSearchResult)
   const [currentIndex, setCurrentIndex] = useState(0);
+
 
    //Code for scrolling right on the carousel
   const carouselScrollRight = () => {
@@ -33,23 +37,42 @@ const HomePage = (props) => {
       setCurrentIndex(currentIndex - 1)
     }
   }
+
+
+
   return (
   //Search functionality, connecting to the API through the apiFetch function in "App" file (in Div with classNmae "search")
   //Carousel functionality, connecting to the Upcoming Movies function in Home to get API data. Accessing scroll functions displayed above via the buttons.
     <body>
-      <div className="search">
-        <div id="SearchBar">
-          <input
-          placeholder="search for a film"
+    <div className="search">
+      <div id="SearchBar">
+        <input
+        placeholder="search for a film"
+        
+        onChange={(event) => props.setSearchTerm(event.target.value)}
+        />
+        <button onClick={() => props.apiFetch(props.searchTerm)}>
+         Click to search for a film
+          </button>
+        </div>
 
-           onChange={(event) => props.setSearchTerm(event.target.value)}
-          />
-         <button onClick={() => props.apiFetch(props.searchTerm)}>
-           Click to search for a film
-            </button>
-          </div>
+        {props.movieSearchResult?.length > 0 ?
+            (
+              <div className='container'>
+                {props.movieSearchResult.map((movie) => (
+                  <MovieCard movies={movie} />
+                ))}
+              </div>
+            ) : (
+              <div className="noResults">
+                <h3>No movies found</h3>
+                </div>
+            )
+          }
+             
 
-        <div className="carousel-container">
+      
+      <div className="carousel-container">
 
          {props.movieData?.length > 0
            ? (

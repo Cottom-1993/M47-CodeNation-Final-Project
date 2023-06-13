@@ -8,7 +8,7 @@ import HomePage from "./pages/home";
 import Account from "./pages/account"
 import {authCheck} from "./utils/index.js"
 import {getCookie} from "./common/index.js"
-import logo from "./image/Shodeon Logo Remastered (2).png"
+import logo from "./image/shodeon.jpeg"
 import FacebookLogo from "./image/Facebook Logo.png"
 import InstagramLogo from "./image/Instagram Logo.png"
 import TwitterLogo from "./image/Twitter logo.png"
@@ -105,6 +105,9 @@ const App = () => {
     <BrowserRouter>
 
       <img className="Logo" src={logo} alt="Company Logo"></img>
+      
+
+      <h1 className="Welcome">Welcome to Shodeon!</h1>
 
     {/* Linking specific routes to specific paths */}
     <div className="navigationLinksHome">

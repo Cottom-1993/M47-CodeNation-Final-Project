@@ -111,7 +111,7 @@ const App = () => {
 
     {/* Linking specific routes to specific paths */}
     <div className="navigationLinksHome">
-    <Link to="/home">Homepage</Link>
+    <Link to="/">Homepage</Link>
     </div>
     <div className="navigationLinksAccount">
     <Link to="/account">Account</Link>
@@ -129,7 +129,7 @@ const App = () => {
 
     {/* Specifying the paths and associating them with various files to display different pages */}
     <Routes>
-      <Route path="/home" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+      <Route path="/" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
       <Route path="/account" element={<Account></Account>}></Route>
     </Routes>
 

@@ -53,27 +53,10 @@ const App = () => {
     setUser(user)
   }
   
-  //API function to get movie data for our search bar
-  const apiFetch = async (searchTerm) => {
-    const url = `https://moviesdatabase.p.rapidapi.com/titles/search/akas/${searchTerm}`;
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`, // your api key goes here
-        'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
-      }
-    };
-  
-    try {
-      const response = await fetch(url, options);
-      const result = await response.json();
-      console.log(result);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+ 
   const [searchTerm, setSearchTerm] = useState("")
   const [movieData, setMovieData] = useState()
+  const [movieSearchResult, setMovieSearchResult] = useState()
   useEffect (() => {
     upcomingMovies()
   },[])
@@ -95,6 +78,28 @@ const App = () => {
       const result = await response.json();
       console.log(result);
       setMovieData(result.results)
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+
+   //API function to get movie data for our search bar
+   const apiFetch = async (searchTerm) => {
+    const url = `https://moviesdatabase.p.rapidapi.com/titles/search/akas/${searchTerm}`;
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`, // your api key goes here
+        'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+      }
+    };
+  
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      // console.log(result);
+      setMovieSearchResult(result.results)
     } catch (error) {
       console.error(error);
     }
@@ -129,7 +134,9 @@ const App = () => {
 
     {/* Specifying the paths and associating them with various files to display different pages */}
     <Routes>
-      <Route path="/" element={<HomePage movieData={movieData} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+
+      <Route path="/home" element={<HomePage movieData={movieData} movieSearchResult={movieSearchResult} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+
       <Route path="/account" element={<Account></Account>}></Route>
     </Routes>
 

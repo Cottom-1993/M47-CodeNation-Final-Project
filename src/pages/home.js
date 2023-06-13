@@ -9,8 +9,9 @@ import "../Master.css"
 import React from "react";
 import './home.css';
 import { useState } from "react";
-
-
+import Login from "../components/Login"
+import Register from "../components/Register"
+import Account from "./account"
 
 const HomePage = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,47 +36,54 @@ const HomePage = (props) => {
   return (
   //Search functionality, connecting to the API through the apiFetch function in "App" file (in Div with classNmae "search")
   //Carousel functionality, connecting to the Upcoming Movies function in Home to get API data. Accessing scroll functions displayed above via the buttons.
+    <body>
+      <div className="search">
+        <div id="SearchBar">
+          <input
+          placeholder="search for a film"
 
-    <div className="search">
-      <div id="SearchBar">
-        <input
-        placeholder="search for a film"
-        
-        onChange={(event) => props.setSearchTerm(event.target.value)}
-        />
-        <button onClick={() => props.apiFetch(props.searchTerm)}>
-         Click to search for a film
-          </button>
-        </div>
-      
-      <div className="carousel-container">
+           onChange={(event) => props.setSearchTerm(event.target.value)}
+          />
+         <button onClick={() => props.apiFetch(props.searchTerm)}>
+           Click to search for a film
+            </button>
+          </div>
 
-        {props.movieData?.length > 0
-          ? (
-              props.movieData.map((movie) => (
-                <div className="movieItem" key={movie.id} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                  <div className="carouselImage">
-                    <img alt="filmImage" src={movie.primaryImage !== null ? movie.primaryImage.url : "https://via.placeholder.com/400"} />
-                    <h5>{movie.originalTitleText.text}</h5>
-                  </div>
+        <div className="carousel-container">
+
+         {props.movieData?.length > 0
+           ? (
+                props.movieData.map((movie) => (
+                 <div className="movieItem" key={movie.id} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                    <div className="carouselImage">
+                      <img alt="filmImage" src={movie.primaryImage !== null ? movie.primaryImage.url : "https://via.placeholder.com/400"} />
+                      <h5>{movie.originalTitleText.text}</h5>
+                    </div>
 
 
-                </div>
+                 </div>
 
-              ))
-          ) : (
-            <h2>No Movies found</h2>
-          )
-          
+               ))
+            ) : (
+             <h2>No Movies found</h2>
+            )
+            
 
-        }
-      <div id="buttonarrow">
-          <button onClick={carouselScrollLeft}> &#8592; </button>
-                   
-          <button onClick={carouselScrollRight}> &#8594; </button>
+          }
+          <div id="buttonarrow">
+           <button onClick={carouselScrollLeft}> &#8592; </button>
+
+           <button onClick={carouselScrollRight}> &#8594; </button>
+          </div>
+
+          <div className="registerLogin">
+          <Register></Register>
+          <Login newUser={Account.setUser}></Login>
+          </div>
+
         </div>
       </div>
-    </div>
+    </body>
   )
 }
 

@@ -44,6 +44,7 @@ const HomePage = (props) => {
   //Search functionality, connecting to the API through the apiFetch function in "App" file (in Div with classNmae "search")
   //Carousel functionality, connecting to the Upcoming Movies function in Home to get API data. Accessing scroll functions displayed above via the buttons.
     <body>
+      
     <div className="search">
       <div id="SearchBar">
         <input
@@ -70,7 +71,7 @@ const HomePage = (props) => {
             )
           }
              
-
+             <h1 className="Welcome">Welcome to Shodeon!</h1>
       
       <div className="carousel-container">
 
@@ -99,10 +100,13 @@ const HomePage = (props) => {
            <button onClick={carouselScrollRight}> &#8594; </button>
           </div>
 
-          <div className="registerLogin">
+          <div className="Register">
           <Register></Register>
+          </div>
+          <div className="Login">
           <Login newUser={Account.setUser}></Login>
           </div>
+          
 
         </div>
       </div>

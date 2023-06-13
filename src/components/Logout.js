@@ -8,7 +8,8 @@ const Logout = () => {
         document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
     }
     return (
-        <div>
+        <div className="Logout">
+            <h3>If you wish to logout, click here</h3>
             <form onSubmit={submitHandler}>
                 <button type="submit">Logout</button>
             </form>

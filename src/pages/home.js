@@ -72,6 +72,7 @@ const HomePage = (props) => {
 
       
       <div className="carousel-container">
+
         {props.movieData?.length > 0
           ? (
               props.movieData.map((movie) => (
@@ -81,11 +82,7 @@ const HomePage = (props) => {
                     <h5>{movie.originalTitleText.text}</h5>
                   </div>
 
-                  <div id="buttonarrow">
-                    <button onClick={carouselScrollLeft}> &#8592; </button>
-                   
-                    <button onClick={carouselScrollRight}> &#8594; </button>
-                  </div>
+
                 </div>
 
               ))
@@ -95,6 +92,11 @@ const HomePage = (props) => {
           
 
         }
+      <div id="buttonarrow">
+          <button onClick={carouselScrollLeft}> &#8592; </button>
+                   
+          <button onClick={carouselScrollRight}> &#8594; </button>
+        </div>
       </div>
     </div>
   )

@@ -26,10 +26,10 @@ img {
 }
 
 #buttonarrow {
-
+    position: absolute;
+    bottom: 27%;
+    left: 40%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     object-fit: cover;
     }
 

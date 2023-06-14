@@ -1,7 +1,5 @@
 import React from "react";
 import {useState, useEffect} from 'react'
-import Login from "../components/Login"
-import Register from "../components/Register"
 import ReadUsers from "../components/ReadUsers"
 import UpdateUser from "../components/UpdateUser"
 import DeleteUser from "../components/DeleteUser"
@@ -38,8 +36,7 @@ const Account = () => {
     return (
         <div>
             <h1 className="accountpage">Welcome to the Account page!</h1>
-            <Register></Register>
-            <Login newUser={setUser}></Login>
+
 
             {user ?
                 <>

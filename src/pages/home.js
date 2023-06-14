@@ -13,11 +13,13 @@ import { useState } from "react";
 import Login from "../components/Login"
 import Register from "../components/Register"
 import Account from "./account"
+import Logout from "../components/Logout"
 
 const HomePage = (props) => {
   // console.log("In Homepage component")
   // console.log(props.movieSearchResult)
   const [currentIndex, setCurrentIndex] = useState(0);
+
 
 
    //Code for scrolling right on the carousel
@@ -44,7 +46,6 @@ const HomePage = (props) => {
   //Search functionality, connecting to the API through the apiFetch function in "App" file (in Div with classNmae "search")
   //Carousel functionality, connecting to the Upcoming Movies function in Home to get API data. Accessing scroll functions displayed above via the buttons.
     <body>
-      
     <div className="search">
       <div id="SearchBar">
         <input
@@ -106,6 +107,10 @@ const HomePage = (props) => {
           <div className="Login">
           <Login newUser={Account.setUser}></Login>
           </div>
+          <div className="Logout">
+          <Logout></Logout>
+          </div>
+          
           
 
         </div>

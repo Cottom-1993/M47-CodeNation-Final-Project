@@ -129,7 +129,7 @@ const App = () => {
     <div id="SliderBar">
     <h2 className = "colortext">Slide to choose dark/light Mode---<span id ="colorOutput"></span></h2>
     {/* <libel>grey: </libel> */}
-    <input type="range" id="rangeGrey" class ="slider" defaultValue="128" min="0" max="255" onChange={() => changeShade() }/>
+    <input type="range" id="rangeGrey" className ="slider" defaultValue="128" min="0" max="255" onChange={() => changeShade() }/>
     </div>
 
     {/* Specifying the paths and associating them with various files to display different pages */}

@@ -14,6 +14,7 @@ import Login from "../components/Login"
 import Register from "../components/Register"
 import Account from "./account"
 import Logout from "../components/Logout"
+import mark from "../image/Saria to santiago.png"
 
 const HomePage = (props) => {
   // console.log("In Homepage component")
@@ -82,6 +83,7 @@ const HomePage = (props) => {
                  <div className="movieItem" key={movie.id} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                     <div className="carouselImage">
                       <img alt="filmImage" src={movie.primaryImage !== null ? movie.primaryImage.url : "https://via.placeholder.com/400"} />
+                      {/* <img alt="filmImage" src={movie.primaryImage !== null ? movie.primaryImage.url : "https://m.media-amazon.com/images/P/B08WZL1T91.01._SCLZZZZZZZ_SX500_.jpg"} /> */}
                       <h5>{movie.originalTitleText.text}</h5>
                     </div>
 
@@ -101,7 +103,8 @@ const HomePage = (props) => {
            <button onClick={carouselScrollRight}> &#8594; </button>
           </div>
 
-          <div className="Register">
+        </div>
+        <div className="Register">
           <Register></Register>
           </div>
           <div className="Login">
@@ -111,9 +114,6 @@ const HomePage = (props) => {
           <Logout></Logout>
           </div>
           
-          
-
-        </div>
       </div>
   </div>
   )

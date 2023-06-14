@@ -8,7 +8,7 @@ const MovieCard = ({movies}) => {
         <div className='movie'>
             
             <div>
-                <img src={movies.primaryImage !== null ? movies.primaryImage.url : "https://via.placeholder.com/400"} />
+                <img src={movies.primaryImage !== null ? movies.primaryImage.url : "https://via.placeholder.com/400"} alt="no poster available"/>
             </div>
 
             <span>{movies.Type}</span>

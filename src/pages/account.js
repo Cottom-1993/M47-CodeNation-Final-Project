@@ -47,7 +47,7 @@ const Account = () => {
                     <Logout></Logout>
                 </>
                 :
-                <h2></h2>
+                <h2>Please log in</h2>   
             }
         </div>
     );

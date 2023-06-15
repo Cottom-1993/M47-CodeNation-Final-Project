@@ -40,7 +40,7 @@ const Account = () => {
 
             {user ?
                 <>
-                    <h2 id="UserList">Hello {user.user}!</h2>
+                    <h2 id="UserList">Hello {user}!</h2>
                     <ReadUsers></ReadUsers>
                     <UpdateUser></UpdateUser>
                     <DeleteUser></DeleteUser>

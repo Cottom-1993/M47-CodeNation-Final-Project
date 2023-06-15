@@ -137,7 +137,7 @@ const App = () => {
 
       <Route path="/" element={<HomePage movieData={movieData} movieSearchResult={movieSearchResult} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
 
-      <Route path="/account" element={<Account user={user}></Account>}></Route>
+      <Route path="/account" element={<Account user={user} setUser={setUser}></Account>}></Route>
     </Routes>
 
 

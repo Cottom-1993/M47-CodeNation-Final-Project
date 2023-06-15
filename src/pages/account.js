@@ -17,7 +17,7 @@ const Account = ({user,setUser}) => {
         if(cookie !== false) {
           loginWithToken(cookie);
         }
-    }, []);
+    }, );
     
     const loginWithToken = async (cookie) => {
         try {

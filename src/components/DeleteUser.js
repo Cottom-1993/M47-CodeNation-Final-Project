@@ -9,8 +9,7 @@ const DeleteUser = () => {
   const [deleted, setDeleted] = useState(false);
   const [error, setError] = useState(false);
 
-  const submitHandler = async (event) => {
-    event.preventDefault();
+  const submitHandler = async () => {
     try {
       await deleteUser(username, password);
       setDeleted(true);

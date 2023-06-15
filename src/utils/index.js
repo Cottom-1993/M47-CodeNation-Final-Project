@@ -1,7 +1,5 @@
 import {writeCookie} from "../common/index.js"
 
-
-
   export const registerUser = async (username, password, email, newUser) => {
     try {
       const response = await fetch(`${process.env.REACT_APP_REST_API_URL}register`, {

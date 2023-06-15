@@ -14,7 +14,6 @@ import Login from "../components/Login"
 import Register from "../components/Register"
 import Account from "./account"
 import Logout from "../components/Logout"
-import mark from "../image/Saria to santiago.png"
 
 const HomePage = (props) => {
   // console.log("In Homepage component")

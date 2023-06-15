@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect} from 'react'
+import {useEffect} from 'react'
 import ReadUsers from "../components/ReadUsers"
 import UpdateUser from "../components/UpdateUser"
 import DeleteUser from "../components/DeleteUser"
@@ -8,8 +8,8 @@ import {authCheck} from "../utils/index.js"
 import {getCookie} from "../common/index.js"
 import "../Master.css"
 
-const Account = () => {
-    const [user, setUser] = useState();
+const Account = ({user,setUser}) => { 
+    // const [user, setUser] = useState();
 
     useEffect(() => {
         let cookie = getCookie("jwt_token");
@@ -17,7 +17,7 @@ const Account = () => {
         if(cookie !== false) {
           loginWithToken(cookie);
         }
-    }, []);
+    }, );
     
     const loginWithToken = async (cookie) => {
         try {
@@ -47,7 +47,7 @@ const Account = () => {
                     <Logout></Logout>
                 </>
                 :
-                <h2>Please log in</h2>   
+                null
             }
         </div>
     );

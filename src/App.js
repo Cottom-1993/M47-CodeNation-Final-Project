@@ -137,18 +137,18 @@ const App = () => {
 
       <Route path="/" element={<HomePage movieData={movieData} movieSearchResult={movieSearchResult} apiFetch={apiFetch} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
 
-      <Route path="/account" element={<Account></Account>}></Route>
+      <Route path="/account" element={<Account user={user} setUser={setUser}></Account>}></Route>
     </Routes>
 
 
     <div className="SocialMediaLinks">
-      <a href="https://www.facebook.com/login/" target="_blank" >
+      <a href="https://www.facebook.com/login/" target="_blank" rel="noreferrer" >
         <img src={FacebookLogo} alt="Facebook Logo"></img>
       </a>
-      <a href="https://www.instagram.com/accounts/login/" target="_blank" >
+      <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noreferrer" >
         <img src={InstagramLogo} alt="Instagram logo"></img>
       </a>
-      <a href="https://twitter.com/i/flow/login" target="_blank" >
+      <a href="https://twitter.com/i/flow/login" target="_blank" rel="noreferrer" >
         <img src={TwitterLogo} alt="Instagram logo"></img>
       </a>
   
